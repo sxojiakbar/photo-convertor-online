@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Converter Online</title>
+  <link rel="icon" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 id="title">Photo Converter Online</h1>
+
+  <div class="controls">
+    <label for="formatSelect">Choose format:</label>
+    <select id="formatSelect">
+      <option value="jpeg">JPG</option>
+      <option value="png">PNG</option>
+    </select>
+
+    <label for="langSelect">🌐 Language:</label>
+    <select id="langSelect">
+      <option value="en">English</option>
+      <option value="uz">O‘zbek</option>
+    </select>
+  </div>
+
+  <div id="drop-area">
+    <p id="dropText">Drag & drop images here or click to select</p>
+    <input type="file" id="fileElem" accept="image/*,.heic,.avif,.webp" multiple />
+  </div>
+
+  <div id="preview"></div>
+
+  <button id="downloadAllBtn" style="display: none;">⬇️ Download All (zip)</button>
+
+  <div id="toast"></div>
+  <div id="loading-spinner" class="spinner"></div>
+
+  <!-- HEIC decoder -->
+  <script src="https://unpkg.com/heic2any/dist/heic2any.min.js"></script>
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
